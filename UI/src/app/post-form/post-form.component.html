@@ -1,0 +1,24 @@
+<form (submit)="onSubmit()">
+    <div>
+      <label for="tags">Tags:</label>
+      <input type="text" id="tags" name="tags" [(ngModel)]="tags">
+    </div>
+    <div>
+      <label for="sortBy">Sort By:</label>
+      <select id="sortBy" name="sortBy" [(ngModel)]="sortBy">
+        <option value="id">ID</option>
+        <option value="reads">Reads</option>
+        <option value="likes">Likes</option>
+        <option value="popularity">Popularity</option>
+      </select>
+    </div>
+    <div>
+      <label for="direction">Direction:</label>
+      <select id="direction" name="direction" [(ngModel)]="direction">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  

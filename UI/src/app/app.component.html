@@ -1,0 +1,19 @@
+
+<div>
+  <app-post-form (formSubmit)="getPosts($event)"></app-post-form>
+</div>
+
+<div>
+<h1>Posts</h1>
+<ul>
+  <li *ngFor="let post of posts">
+    <p>ID: {{ post.id }}</p>
+    <p>Author: {{ post.author }}</p>
+    <p>Author ID: {{ post.authorId }}</p>
+    <p>Likes: {{ post.likes }}</p>
+    <p>Popularity: {{ post.popularity }}</p>
+    <p>Reads: {{ post.reads }}</p>
+    <p>Tags: {{ post.tags }}</p>
+  </li>
+</ul>
+</div>

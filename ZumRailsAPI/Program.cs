@@ -16,8 +16,9 @@ builder.Services.AddCors(options =>
         builder => builder
             .AllowAnyHeader()
             .AllowAnyMethod()
-            .AllowAnyOrigin());
+            .WithOrigins("http://localhost:4200"));
 });
+
 
 builder.Services.AddScoped<IZumRailsRepository, ZumRailsRepository>();
 builder.Services.AddScoped<IZumRailsService, ZumRailsService>();
@@ -31,6 +32,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 
