@@ -1,4 +1,4 @@
-Hi ZumRails team,
+Simple web api and frontend
 
 You will find the api that is written in .net 6.
 The UI is in angular 17.
